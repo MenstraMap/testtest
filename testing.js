@@ -5,8 +5,8 @@ const server = http.createServer(app);
 const bodyParser = require('body-parser');
 const { createClient } = require('@supabase/supabase-js');
 
-const supabaseUrl = 'https://kdcwsxgqlmzeyfszmhvz.supabase.co';
-const supabaseKey = process.env.supabaseKey;
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.use(bodyParser.json());
